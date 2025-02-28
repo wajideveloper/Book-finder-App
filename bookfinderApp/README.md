@@ -50,23 +50,31 @@ If cloning from GitHub:
    ```bash
    cd frontend
    ```
-   Project Setup
+
+### Project Setup
 
 This frontend is built using React with Vite and utilizes various dependencies such as Tailwind CSS, Mantine UI, and React Router.
 
-Installation and Setup
+## Installation and Setup
 
-Clone the repository:
+## Clone the repository:
 
+```bash
 git clone https://github.com/wajideveloper/Book-finder-App.git
-cd frontend
+```
 
-Create a new React app using Vite:
+## cd frontend
 
-npm create vite@latest .
+## Create a new React app using Vite:
 
-Install dependencies:
+```bash
+ npm create vite@latest .
+```
 
-npm install
+## Install dependencies:
+
+```bash
+  npm install
+```
 
 Start the development server:

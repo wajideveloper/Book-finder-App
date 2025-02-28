@@ -55,74 +55,84 @@ If cloning from GitHub:
    cd backend
    ```
 
-```
-
-Project Setup
+### Project Setup
 
 This backend is built using Node.js and Express, with MongoDB for database management and Prisma for ORM.
 
-Installation and Setup
+## Clone the repository:
 
-Clone the repository:
-
+```bash
 git clone https://github.com/wajideveloper/Book-finder-App.git
-cd backend
+```
 
-Install dependencies:
+## cd backend
 
+## Install dependencies:
+
+```bash
 npm install
+```
 
-Setup Prisma:
+## Setup Prisma:
 
+```bash
 npx prisma generate
+```
 
-Create a .env file and add the required environment variables:
+## Create a .env file and add the required environment variables:
 
+```bash
 DATABASE_URL="mongodb+srv://wajid_gis42540:mongodb42540@cluster0.xxlmy.mongodb.net/book-finder?retryWrites=true&w=majority&appName=Cluster0"
 PORT=8080
 JWT_SECRET='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzAzOTM0MjJhZTlmNDFlODc0ZGE3MyIsImlhdCI6MTc0MDY1MTkzNiwiZXhwIjoxNzQwNjU1NTM2fQ.TY-q6JJFWZpoaQQQv5AHPSEIcEFlv35yNsoNxHJCZnc'
+```
 
 Ensure MongoDB is running before starting the server.
 
-Start the development server:
+## Start the development server:
 
+```bash
 npm run start:dev
+```
 
-To run in production mode:
+## To run in production mode:
 
+```bash
 npm start
+```
 
-Server Information
+## Server Information
 
 Server runs at: http://localhost:8080
 
-API Endpoints
+## API Endpoints
 
-Auth:
+## Auth:
 
-POST /api/auth/register - Register a user.
+- POST /api/auth/register - Register a user.
 
-POST /api/auth/login - Login a user.
+- POST /api/auth/login - Login a user.
 
-Books:
+- GET /api/books - Fetch all books.
 
-GET /api/books - Fetch all books.
+- POST /api/books - Create a book (authenticated).
 
-POST /api/books - Create a book (authenticated).
+## Favorites:
 
-Favorites:
+- GET /api/favorites - Fetch user favorites (authenticated).
 
-GET /api/favorites - Fetch user favorites (authenticated).
+- POST /api/favorites - Add a favorite (authenticated).
 
-POST /api/favorites - Add a favorite (authenticated).
+- DELETE /api/favorites/:id - Remove a favorite (authenticated).
 
-DELETE /api/favorites/:id - Remove a favorite (authenticated).
+## Notes
 
-Notes
+- The frontend expects the backend at http://localhost:8080.
 
-The frontend expects the backend at http://localhost:8080.
-
-Contributing
+## ontributing
 
 See the root README.md for contribution guidelines.
+
+```
+
 ```
