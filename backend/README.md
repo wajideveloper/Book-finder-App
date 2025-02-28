@@ -1,6 +1,3 @@
-#### `backend/README.md`
-
-````markdown
 # Book Finder App - Backend
 
 This is the backend codebase for the **Book Finder App**, a Node.js/Express server that provides API endpoints for book management, user authentication, and file uploads. It uses Prisma with MongoDB for data persistence.
@@ -57,4 +54,75 @@ If cloning from GitHub:
    ```bash
    cd backend
    ```
-````
+
+```
+
+Project Setup
+
+This backend is built using Node.js and Express, with MongoDB for database management and Prisma for ORM.
+
+Installation and Setup
+
+Clone the repository:
+
+git clone https://github.com/wajideveloper/Book-finder-App.git
+cd backend
+
+Install dependencies:
+
+npm install
+
+Setup Prisma:
+
+npx prisma generate
+
+Create a .env file and add the required environment variables:
+
+DATABASE_URL="mongodb+srv://wajid_gis42540:mongodb42540@cluster0.xxlmy.mongodb.net/book-finder?retryWrites=true&w=majority&appName=Cluster0"
+PORT=8080
+JWT_SECRET='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzAzOTM0MjJhZTlmNDFlODc0ZGE3MyIsImlhdCI6MTc0MDY1MTkzNiwiZXhwIjoxNzQwNjU1NTM2fQ.TY-q6JJFWZpoaQQQv5AHPSEIcEFlv35yNsoNxHJCZnc'
+
+Ensure MongoDB is running before starting the server.
+
+Start the development server:
+
+npm run start:dev
+
+To run in production mode:
+
+npm start
+
+Server Information
+
+Server runs at: http://localhost:8080
+
+API Endpoints
+
+Auth:
+
+POST /api/auth/register - Register a user.
+
+POST /api/auth/login - Login a user.
+
+Books:
+
+GET /api/books - Fetch all books.
+
+POST /api/books - Create a book (authenticated).
+
+Favorites:
+
+GET /api/favorites - Fetch user favorites (authenticated).
+
+POST /api/favorites - Add a favorite (authenticated).
+
+DELETE /api/favorites/:id - Remove a favorite (authenticated).
+
+Notes
+
+The frontend expects the backend at http://localhost:8080.
+
+Contributing
+
+See the root README.md for contribution guidelines.
+```
